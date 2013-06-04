@@ -1,7 +1,7 @@
 {
-	"name": "danesten/slim-template",
-	"description": "slimphp framework template",
-	"license": "MIT",
+    "name": "danesten/slim-template",
+    "description": "slimphp framework template",
+    "license": "MIT",
     "require": {
         "slim/slim": "2.*",
         "slim/extras": "2.*",
