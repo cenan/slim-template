@@ -22,9 +22,15 @@ $app = new \Slim\Slim(array(
 );
 $app->view(new \Slim\Extras\Views\Twig());
 
+$app->notFound(function () use ($app) {
+	$app->render('404.twig', [
+		'resourceURI' => $app->request()->getResourceUri()
+		]);
+});
+
 // Define routes
 $app->get('/', function () use ($app) {
-    $app->render('index.html');
+    $app->render('index.twig');
 });
 
 // Run app
