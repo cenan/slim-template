@@ -1,0 +1,6 @@
+/vendor/
+/logs/*
+!/logs/.gitkeep
+/templates/cache/*
+!/templates/cache/.gitkeep
+.DS_STORE
