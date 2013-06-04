@@ -1,4 +1,4 @@
 #!/bin/sh
 
-php -S0.0.0.0:4044 -t htdocs
+php -S0.0.0.0:4044 -t public
 
