@@ -4,3 +4,5 @@
 /templates/cache/*
 !/templates/cache/.gitkeep
 .DS_STORE
+
+composer.phar
