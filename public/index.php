@@ -6,7 +6,7 @@ require '../vendor/autoload.php';
 
 // Prepare app
 $app = new \Slim\Slim(array(
-    'templates.path' => '../templates',
+    'templates.path' => '../app/views',
     'log.level' => 4,
     'log.enabled' => true,
     'log.writer' => new \Slim\Extras\Log\DateTimeFileWriter(array(
@@ -19,7 +19,7 @@ $app = new \Slim\Slim(array(
 $view = new \Slim\Views\Twig();
 $view->parserOptions = array(
     'charset' => 'utf-8',
-    'cache' => realpath('../templates/cache'),
+    'cache' => realpath('../app/views/cache'),
     'auto_reload' => true,
     'strict_variables' => false,
     'autoescape' => true
