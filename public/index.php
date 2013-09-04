@@ -24,12 +24,15 @@ $view->parserOptions = array(
     'strict_variables' => false,
     'autoescape' => true
 );
+$view->parserExtensions = array(
+    new \Slim\Views\TwigExtension(),
+);
 $app->view($view);
 
 $app->notFound(function () use ($app) {
-	$app->render('404.twig', [
-		'resourceURI' => $app->request->getResourceUri()
-		]);
+    $app->render('404.twig', [
+        'resourceURI' => $app->request->getResourceUri()
+        ]);
 });
 
 // Define routes
