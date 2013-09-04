@@ -1,8 +1,8 @@
 /vendor/
 /logs/*
 !/logs/.gitkeep
-/templates/cache/*
-!/templates/cache/.gitkeep
+/app/views/cache/*
+!/app/views/cache/.gitkeep
 .DS_STORE
 
 composer.phar
