@@ -1,4 +1,7 @@
 <?php
+
+date_default_timezone_set("America/Los_Angeles");
+
 require '../vendor/autoload.php';
 
 // Prepare app
@@ -13,18 +16,19 @@ $app = new \Slim\Slim(array(
 ));
 
 // Prepare view
-\Slim\Extras\Views\Twig::$twigOptions = array(
+$view = new \Slim\Views\Twig();
+$view->parserOptions = array(
     'charset' => 'utf-8',
     'cache' => realpath('../templates/cache'),
     'auto_reload' => true,
     'strict_variables' => false,
     'autoescape' => true
 );
-$app->view(new \Slim\Extras\Views\Twig());
+$app->view($view);
 
 $app->notFound(function () use ($app) {
 	$app->render('404.twig', [
-		'resourceURI' => $app->request()->getResourceUri()
+		'resourceURI' => $app->request->getResourceUri()
 		]);
 });
 
